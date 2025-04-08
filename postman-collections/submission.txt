@@ -1,0 +1,46 @@
+curl --location 'https://api.placeholder.com/v1/resource' \
+--header 'apiKey: your_api_key_here' \
+--header 'Content-Type: application/json' \
+--data '{
+    "transactionRequestId": "sample-transaction-id",
+    "transactionProgram": {
+        "productCode": "sample_product_code",
+        "operationCode": "sample_operation_code",
+        "transactionType": "sample_transaction_type",
+        "transactionGroupId": "sample_transaction_group_id"
+    },
+    "paymentScheme": "sample_payment_scheme",
+    "feeParameter": {
+        "singleFeePercentage": "sample_single_fee_percentage",
+        "recurringFeePercentage": "sample_recurring_fee_percentage",
+        "topUpFeePercentage": "sample_top_up_fee_percentage",
+        "managementFeeMonthlyPercentage": "sample_management_fee_monthly_percentage"
+    },
+    "insured": [
+        {
+            "requestId": "sample_request_id",
+            "planCode": "sample_plan_code",
+            "effectiveDate": "sample_effective_date",
+            "insuranceStartDate": "sample_insurance_start_date",
+            "dateOfBirth": "sample_date_of_birth",
+            "dateOfWork": "sample_date_of_work",
+            "retiredAge": "sample_retired_age",
+            "monthlySalary": "sample_monthly_salary",
+            "benefitValueTerm": "sample_benefit_value_term",
+            "additionalBenefit": {
+                "totalDisabilityCoverage": "sample_total_disability_coverage",
+                "criticalIllnessCoverage": "sample_critical_illness_coverage"
+            },
+            "rateCodeTermLife": "sample_rate_code_term_life",
+            "rateCodeTPD": "sample_rate_code_tpd",
+            "rateCodeCI": "sample_rate_code_ci",
+            "premiumParameter": {
+                "singlePremium": "sample_single_premium",
+                "recurringPremium": "sample_recurring_premium",
+                "recurringBillingCount": "sample_recurring_billing_count",
+                "paymentFrequency": "sample_payment_frequency"
+            }
+        }
+    ]
+}'
+
